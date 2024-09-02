@@ -4,14 +4,15 @@
 
 1. cloning public lab materials
 ```bash
+cd ~/
 git clone https://github.com/Integrative-Data-Comprehension-Lab/Class_LifeCare_Lab_public.git
 
 ```
 
 2. cloning your private repository
 ```bash
-git clone https://<YOUR_USERNAME>:<YOUR_TOKEN>@github.com/\
-<YOUR_USERNAME>/<YOUR_PRIVATE_REPOSITORY_NAME>.git
+git clone https://YOUR_USERNAME:YOUR_TOKEN@github.com/\
+YOUR_USERNAME/YOUR_PRIVATE_REPOSITORY_NAME.git
 ```
 
 3. 실험 자료를 개인 레포지토리로 가져오기
