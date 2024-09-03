@@ -21,6 +21,14 @@ cp Class_LifeCare_Lab_public/README.md YOUR_PRIVATE_REPOSITORY_NAME/
 cp Class_LifeCare_Lab_public/lab_XX –r YOUR_PRIVATE_REPOSITORY_NAME/
 ```
 
+4. 실험 진행 전 상태를 푸쉬하기
+```bash
+git status
+git add .
+git commit -m "before lab_XX"
+git push
+```
+
 ## 과제 제출 방법
  - <mark>(주의)</mark> 폴더 구조, 파일 이름, 함수 이름, 또는 함수 인자를 변경할 경우 테스트 모듈이 정상 작동하지 않으니 주의할 것.
  - <mark>(주의)</mark> jupyter notebook에 테스트를 위해 기존에 없던 새로운 셀을 추가했다면 반드시 삭제할것. (코드 테스트가 실패할 수 있음)
