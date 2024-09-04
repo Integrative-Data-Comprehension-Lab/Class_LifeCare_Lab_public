@@ -6,7 +6,6 @@
 ```bash
 cd ~/
 git clone https://github.com/Integrative-Data-Comprehension-Lab/Class_LifeCare_Lab_public.git
-
 ```
 
 2. cloning your private repository
@@ -37,7 +36,7 @@ git push
 1. .ipynb파일은 .py 파일로 변환한다.
 ``` bash
 cd lab_XX
-jupyter nbconvert <file_name>.ipynb --to script \
+jupyter nbconvert FILE_NAME.ipynb --to script \
 --TagRemovePreprocessor.enabled=True \
 --TagRemovePreprocessor.remove_cell_tags execute_cell
 ```
