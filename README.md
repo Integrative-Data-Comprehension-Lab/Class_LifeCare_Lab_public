@@ -18,11 +18,12 @@ YOUR_USERNAME/YOUR_PRIVATE_REPOSITORY_NAME.git
 3. 실험 자료를 개인 레포지토리로 가져오기
 ```bash
 cp Class_LifeCare_Lab_public/README.md YOUR_PRIVATE_REPOSITORY_NAME/
-cp Class_LifeCare_Lab_public/lab_XX –r YOUR_PRIVATE_REPOSITORY_NAME/
+cp Class_LifeCare_Lab_public/lab_XX -r YOUR_PRIVATE_REPOSITORY_NAME/
 ```
 
 4. 실험 진행 전 상태를 푸쉬하기
 ```bash
+cd ~/YOUR_PRIVATE_REPOSITORY_NAME
 git status
 git add .
 git commit -m "before lab_XX"
