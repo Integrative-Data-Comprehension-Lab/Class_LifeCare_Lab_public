@@ -7,8 +7,8 @@
 # image2
 # image3
 #
-# 중복파일 여부를 확인하는데에 md5sum 명령어가 사용될 수 있으며, 
-# 이 명령어는 파일들의 MD5 체크섬 값을 출력하며 동일한 파일은 같은 체크섬 값을 가질 것이다.
+# 중복파일 여부를 확인하는데에 md5sum 명령어가 사용될 수 있다.
+# md5sum 명령어는 파일들의 MD5 체크섬 값을 출력하며, 내용이 동일한 파일은 같은 체크섬 값을 가질 것이다.
 #
 # Arguments:
 #   $1: 중복여부를 체크할 파일들이 존재하는 디렉터리 경로
@@ -17,7 +17,7 @@
 #   가장 많이 중복된 파일들의 이름이 \n (new line)으로 구분되어 stdout으로 출력된다
 #
 # Example Usage:
-#   ./lab_01_file_duplication_detector.sh resources/detecting_duplicate_files/
+#   ./lab_01_file_duplication_detector.sh resources/detecting_duplicate_files
 
 
 usage()
@@ -27,7 +27,7 @@ usage()
 Usage: $script_name [PATH]
 Description: Check the files inside the [PATH] and print out list of filenames that is most frequently duplicated. Output file lists are separated by "\n"
 Example usage:
-    $script_name resources/detecting_duplicate_files/
+    $script_name resources/detecting_duplicate_files
 END
 
 }
@@ -41,6 +41,5 @@ fi
 directory=$1
 
 ##### YOUR CODE START #####  
-
 
 ##### YOUR CODE END #####
