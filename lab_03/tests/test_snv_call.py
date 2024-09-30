@@ -36,13 +36,13 @@ def setup_directories():
     print("----- All test run finished. Cleaning up test_dir after testing : {TEST_DIR}")
     subprocess.run(["rm", "-rf", TEST_DIR])
 
-def test_script_execution_score_5(setup_directories):
+def test_script_execution_score_0(setup_directories):
     result = subprocess.run([SCRIPT_PATH, SAMPLE_NAME, INPUT_DIR, INTERMEDIATE_DIR, RESULTS_DIR], 
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
     assert result.returncode == 0, f"Script failed to run: {result.stderr.decode()}"
 
-def test_summary_file_score_5():
+def test_summary_file_score_6():
     # Check if the QC_summary.txt file is created
     summary_file = RESULTS_DIR / "QC_summary.txt"
     assert summary_file.exists(), "QC_summary.txt was not created on expected location"
@@ -80,12 +80,12 @@ def test_ref_index_score_2():
     assert ref_index2.exists(), "gatk CreateSequenceDictionary indexing not performed"
     assert ref_index3.exists(), "BWA index not created for reference genome"
 
-def test_align_score_1():
+def test_align_score_2():
     # Check if the SAM file from BWA MEM was created
     aligned_sam = INTERMEDIATE_DIR / f"{SAMPLE_NAME}.aligned.sam"
     assert aligned_sam.exists(), "Aligned SAM file not created"
 
-def test_sort_bam_score_1():
+def test_sort_bam_score_2():
     sorted_bam = INTERMEDIATE_DIR / f"{SAMPLE_NAME}.sorted.bam"
     assert sorted_bam.exists(), "Sorted BAM file not created"
 
@@ -93,7 +93,7 @@ def test_mark_duplicates_score_1():
     markdup_bam = INTERMEDIATE_DIR / f"{SAMPLE_NAME}.markdup.bam"
     assert markdup_bam.exists(), "MarkDuplicates BAM file not created"
 
-def test_haplotypecaller_vcf_score_1():
+def test_haplotypecaller_vcf_score_2():
     vcf_file = RESULTS_DIR / f"{SAMPLE_NAME}.raw_variants.vcf"
     assert vcf_file.exists(), "VCF file not created by HaplotypeCaller"
 
@@ -102,7 +102,7 @@ def test_haplotypecaller_vcf_score_1():
 
     assert variant_count == 37, f"Expected 37 variants at raw_variants.vcf file, but found {variant_count}"
 
-def test_vcf_filter_score_1():
+def test_vcf_filter_score_2():
     vcf_file = RESULTS_DIR / f"{SAMPLE_NAME}.filtered_variants.vcf"
     assert vcf_file.exists(), "filtered_variants.vcf file not created"
 
