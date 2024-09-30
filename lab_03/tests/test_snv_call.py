@@ -10,7 +10,7 @@ TEST_DIR = Path("./temporary_testdir")
 INPUT_DIR = Path(TEST_DIR) / "inputs"
 INTERMEDIATE_DIR = Path(TEST_DIR) / "intermediates"
 RESULTS_DIR = Path(TEST_DIR) / "results"
-SCRIPT_PATH = "./lab_02_snv_call.sh"
+SCRIPT_PATH = "./snv_call_pipeline.sh"
 
 
 @pytest.fixture(scope="module")
